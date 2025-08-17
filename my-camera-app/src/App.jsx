@@ -8,21 +8,21 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-      <h1 className="text-3xl font-bold mb-6">📸 Web App - Camera</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
+      <h1 className="text-2xl font-semibold mb-4">📸 Capture uma Foto</h1>
       <button
         onClick={handleOpenCamera}
-        className="bg-white text-blue-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition"
+        className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition"
       >
         Abrir Câmera
       </button>
 
-      {/* input escondido que abre a câmera */}
+      {/* Input escondido para capturar a foto */}
       <input
         ref={fileInputRef}
         type="file"
         accept="image/*"
-        capture="user" // força abrir a câmera
+        capture="environment" // Use "user" para câmera frontal ou "environment" para traseira
         className="hidden"
         onChange={(e) => {
           if (e.target.files && e.target.files[0]) {
