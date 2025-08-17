@@ -22,7 +22,7 @@ export default function App() {
         ref={fileInputRef}
         type="file"
         accept="image/*"
-        capture="environment" // Use "user" para câmera frontal ou "environment" para traseira
+        capture="user" // Use "user" para câmera frontal ou "environment" para traseira
         className="hidden"
         onChange={(e) => {
           if (e.target.files && e.target.files[0]) {
